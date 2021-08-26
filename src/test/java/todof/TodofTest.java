@@ -10,8 +10,7 @@ class TodofTest {
     @Test
     void testParallel() {
         Results results = Runner.path("classpath:todof")
-                //.outputCucumberJson(true)
-                .parallel(5);
+              .parallel(5);
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
 
